@@ -1,0 +1,31 @@
+{
+  "name": "object-assign-mdn",
+  "version": "1.0.0",
+  "description": "Object.assign polyfill copied from MDN",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "transpile": "babel ./src --out-dir ./dist",
+    "uglify": "./node_modules/.bin/uglifyjs --compress --mangle -o dist/index.js -- dist/index.js",
+    "prepublish": "npm run transpile && npm run uglify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msn0/object-assign-mdn.git"
+  },
+  "keywords": [
+    "object.assign",
+    "assign"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msn0/object-assign-mdn/issues"
+  },
+  "homepage": "https://github.com/msn0/object-assign-mdn#readme",
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-preset-es2015": "^6.9.0",
+    "uglify-js": "^2.7.0"
+  }
+}
